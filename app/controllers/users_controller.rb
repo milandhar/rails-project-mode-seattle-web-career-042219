@@ -13,7 +13,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    byebug
     @user = User.create(user_params)
     redirect_to @user
   end

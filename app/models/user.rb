@@ -1,10 +1,10 @@
 class User < ApplicationRecord
   has_many :rounds
   has_many :hands, through: :rounds
-  attr_accessor :points
 
-  def initialize(points=1000)
-    @points = points
+  def initialize(attributes = {})
+    super
+    self.points = 1000
   end
- 
+
 end
