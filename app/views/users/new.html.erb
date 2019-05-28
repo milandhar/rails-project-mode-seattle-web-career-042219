@@ -1,0 +1,10 @@
+<h1>Create User Profile:</h1>
+
+<%= form_for @user do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit "Create" %>
+<% end %>
