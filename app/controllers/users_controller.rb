@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    byebug
     @user = User.create(user_params)
     redirect_to @user
   end
@@ -26,7 +27,6 @@ class UsersController < ApplicationController
     @user.update(user_params)
     redirect_to @user
   end
-
 
   private
   def user_params
