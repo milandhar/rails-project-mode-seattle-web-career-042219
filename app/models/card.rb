@@ -20,7 +20,7 @@ class Card < ApplicationRecord
   end
 
   def short
-    "#{self.face[0]}#{self.suit[0].downcase}"
+    "#{self.face[0]}#{self.suit[0]}"
   end
 
   def long
