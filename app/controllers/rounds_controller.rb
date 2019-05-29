@@ -23,6 +23,9 @@ class RoundsController < ApplicationController
 
   def show
     @round = Round.find(params[:id])
+    @user = @round.user
+    @hands = #find by id, is array
+    @d_hand = @hands.find #{player's = false}
   end
 
   def edit

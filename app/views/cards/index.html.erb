@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<% card = @cards.sample %>
+<%= image_tag("card-images/#{card.short}.png", :size => "100x150") %>
+<%= image_tag("card-back.png", :size => "100x150")%><br>
+<%= card.long %>
+</body>
+</html>
