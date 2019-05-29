@@ -10,11 +10,15 @@ class RoundsController < ApplicationController
 
   def create
     @round = Round.new(round_params())
-    if @round.save
-        redirect_to @round
+    @user = @round.user
+    @d_hand = @round.deal_dealer_hand
+    @p_hand = @round.deal_player_hand
+    if @round.user.ante(@round.ante_amount)
+      @user.save
     else
-        render :new
+      puts 'Error, not enough points for this ante'
     end
+    @round.save
   end
 
   def show
@@ -37,6 +41,6 @@ class RoundsController < ApplicationController
 private
 
   def round_params()
-    params.require(:round).permit(:first_name, :last_name)
+    params.require(:round).permit!
   end
 end
