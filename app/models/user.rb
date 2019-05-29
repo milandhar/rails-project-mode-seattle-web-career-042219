@@ -7,4 +7,12 @@ class User < ApplicationRecord
     self.points = 1000
   end
 
+  def ante(ante_amount)
+    if self.points >= ante_amount
+      self.points -= ante_amount
+    else
+      false
+    end
+  end
+
 end
