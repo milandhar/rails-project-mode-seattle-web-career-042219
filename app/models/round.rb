@@ -3,6 +3,7 @@ class Round < ApplicationRecord
   has_many :hands
 
   def initialize(args)
+    super
     #"Resets" the deck by making all cards available
     Card.reset_deck
   end

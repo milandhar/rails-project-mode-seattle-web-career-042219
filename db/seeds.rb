@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Card.destroy_all
 
+
+
 CARDLIST= [
   Card.create(id: 1, value: 2, suit: "Clubs", is_dealt: false),
   Card.create(id: 2, value: 3, suit: "Clubs", is_dealt: false),
@@ -61,27 +63,9 @@ CARDLIST= [
   Card.create(id: 51, value: 13, suit: "Spades", is_dealt: false),
   Card.create(id: 52, value: 14, suit: "Spades", is_dealt: false),
 
-
 ]
-
-User.destroy_all
-Round.destroy_all
-
-testuser = User.create(id: 1, name:"Alex", username: "test", points: 1000)
-testround = Round.create(id: 1, ante_amount: 5, active: true)
-
-
-card1 = Card.create(suit: "hearts", value: "5", is_dealt: true)
-card2 = Card.create(suit: "spades", value: "11", is_dealt: true)
-card3 = Card.create(suit: "diamonds", value: "11", is_dealt: true)
-card4 = Card.create(suit: "clubs", value: "5", is_dealt: true)
-card5 = Card.create(suit: "hearts", value: "10", is_dealt: true)
-
-card6 = Card.create(suit: "spades", value: "8", is_dealt: true)
-card7 = Card.create(suit: "diamonds", value: "9", is_dealt: true)
-card8 = Card.create(suit: "diamonds", value: "10", is_dealt: true)
-card9 = Card.create(suit: "clubs", value: "11", is_dealt: true)
-card10 = Card.create(suit: "hearts", value: "12", is_dealt: true)
-
-test_user_hand = Card.all[1..5]
-test_dealer_hand = Card.all[6..10]
+byebug
+testuser = User.find_or_create_by(id: 1, name:"Alex", username: "test", points: 1000)
+testround = Round.find_or_create_by(id: 1, user_id: 1, ante_amount: 5, active: true)
+testuserhand = Hand.find_or_create_by(id: 2, round_id: 1, is_player_hand: true)
+testdealerhand = Hand.find_or_create_by(id: 3, round_id: 1, is_player_hand: false)
