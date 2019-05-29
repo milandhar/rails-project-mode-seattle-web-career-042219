@@ -1,16 +1,11 @@
 class Hand < ApplicationRecord
   belongs_to :round
-<<<<<<< HEAD
   has_many :card_hands
   has_many :cards, through: :card_hands
 
   def sort_by_face
     self.sort_by { |c| [c.face, c.suit] }.reverse
   end
-=======
-  has_many :cards
-
->>>>>>> 052c53c5ec1d524bf9c0793f2ad31fedac9ae14d
 
 #https://codereview.stackexchange.com/questions/37165/weekend-challenge-ruby-poker-hand-evaluation
   ACE_LOW  = 1
