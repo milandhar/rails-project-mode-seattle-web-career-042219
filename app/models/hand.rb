@@ -21,6 +21,7 @@ class Hand < ApplicationRecord
 
   def initialize(attributes_hash = {})
     byebug
+    self.cards << Card.deal(5)
     raise ArgumentError unless self.cards.count == 5
     self.cards = self.cards.freeze
   end
