@@ -1,7 +1,7 @@
 class Hand < ApplicationRecord
   belongs_to :round
-  has_many :card_hands
-  has_many :cards, through: :card_hands
+  has_many :hand_cards
+  has_many :cards, through: :hand_cards
 
   def sort_by_face
     self.sort_by { |c| [c.face, c.suit] }.reverse
@@ -24,9 +24,8 @@ class Hand < ApplicationRecord
     }.freeze
 
   def initialize(attributes_hash = {})
-    self.cards = Card.deal(5)
-    raise ArgumentError unless @cards.count == 5
-
+    super
+    self.cards << Card.deal(5)
   end
 
   # The hand's rank as an array containing the hand's
@@ -163,5 +162,8 @@ class Hand < ApplicationRecord
       (from...from + 5).to_a
     end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 265153fbeba34818858c35edfca3beef5098e6b4
 end
