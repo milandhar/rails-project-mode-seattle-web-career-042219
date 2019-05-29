@@ -2,19 +2,29 @@ class Card < ApplicationRecord
   has_many :hand_cards
   has_many :hands, through: :hand_cards
 
-  def display_face
+  def face
     case self.value
     when "14"
-      "A"
+      "Ace"
     when "13"
-      "K"
+      "King"
     when "12"
-      "Q"
+      "Queen"
     when "11"
-      "J"
+      "Jack"
+    when "10"
+      "Ten"
     else
       self.value.to_s
     end
+  end
+
+  def short
+    "#{self.face[0]}#{self.suit[0].downcase}"
+  end
+
+  def long
+    "#{self.face} of #{self.suit}"
   end
 
   def self.deal(n=1)
