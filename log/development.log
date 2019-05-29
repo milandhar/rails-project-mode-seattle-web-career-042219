@@ -547,3 +547,643 @@ Migrating to AddIsPlayerHandToHands (20190528185758)
   ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to RemoveTableCardHands (20190528231348)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "table_card_hands"[0m
+  ↳ db/migrate/20190528231348_remove_table_card_hands.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190528231348"]]
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateCardhands (20190528231403)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190528231403_create_cardhands.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cardhands" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" integer, "hand_id" integer)[0m
+  ↳ db/migrate/20190528231403_create_cardhands.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_cardhands_on_card_id" ON "cardhands" ("card_id")[0m
+  ↳ db/migrate/20190528231403_create_cardhands.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_cardhands_on_hand_id" ON "cardhands" ("hand_id")[0m
+  ↳ db/migrate/20190528231403_create_cardhands.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190528231403"]]
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateCardhands (20190528231403)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "cardhands"[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190528231403"]]
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateHandCards (20190528231403)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190528231403_create_hand_cards.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "hand_cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" integer, "hand_id" integer)[0m
+  ↳ db/migrate/20190528231403_create_hand_cards.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_hand_cards_on_card_id" ON "hand_cards" ("card_id")[0m
+  ↳ db/migrate/20190528231403_create_hand_cards.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_hand_cards_on_hand_id" ON "hand_cards" ("hand_id")[0m
+  ↳ db/migrate/20190528231403_create_hand_cards.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190528231403"]]
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["suit", "Clubs"], ["value", "2"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.113066"], ["updated_at", "2019-05-29 00:25:50.113066"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["suit", "Clubs"], ["value", "3"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.115979"], ["updated_at", "2019-05-29 00:25:50.115979"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["suit", "Clubs"], ["value", "4"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.118411"], ["updated_at", "2019-05-29 00:25:50.118411"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["suit", "Clubs"], ["value", "5"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.121132"], ["updated_at", "2019-05-29 00:25:50.121132"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["suit", "Clubs"], ["value", "6"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.123586"], ["updated_at", "2019-05-29 00:25:50.123586"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["suit", "Clubs"], ["value", "7"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.126170"], ["updated_at", "2019-05-29 00:25:50.126170"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["suit", "Clubs"], ["value", "8"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.128876"], ["updated_at", "2019-05-29 00:25:50.128876"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["suit", "Clubs"], ["value", "9"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.131406"], ["updated_at", "2019-05-29 00:25:50.131406"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["suit", "Clubs"], ["value", "10"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.133579"], ["updated_at", "2019-05-29 00:25:50.133579"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 10], ["suit", "Clubs"], ["value", "11"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.135666"], ["updated_at", "2019-05-29 00:25:50.135666"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 11], ["suit", "Clubs"], ["value", "12"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.138480"], ["updated_at", "2019-05-29 00:25:50.138480"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 12], ["suit", "Clubs"], ["value", "13"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.140813"], ["updated_at", "2019-05-29 00:25:50.140813"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 13], ["suit", "Clubs"], ["value", "14"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.142938"], ["updated_at", "2019-05-29 00:25:50.142938"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 14], ["suit", "Diamonds"], ["value", "2"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.144956"], ["updated_at", "2019-05-29 00:25:50.144956"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 15], ["suit", "Diamonds"], ["value", "3"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.147676"], ["updated_at", "2019-05-29 00:25:50.147676"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 16], ["suit", "Diamonds"], ["value", "4"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.149643"], ["updated_at", "2019-05-29 00:25:50.149643"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 17], ["suit", "Diamonds"], ["value", "5"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.151677"], ["updated_at", "2019-05-29 00:25:50.151677"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 18], ["suit", "Diamonds"], ["value", "6"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.154465"], ["updated_at", "2019-05-29 00:25:50.154465"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 19], ["suit", "Diamonds"], ["value", "7"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.157658"], ["updated_at", "2019-05-29 00:25:50.157658"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 20], ["suit", "Diamonds"], ["value", "8"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.160161"], ["updated_at", "2019-05-29 00:25:50.160161"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 21], ["suit", "Diamonds"], ["value", "9"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.162329"], ["updated_at", "2019-05-29 00:25:50.162329"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 22], ["suit", "Diamonds"], ["value", "10"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.164284"], ["updated_at", "2019-05-29 00:25:50.164284"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 23], ["suit", "Diamonds"], ["value", "11"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.166316"], ["updated_at", "2019-05-29 00:25:50.166316"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 24], ["suit", "Diamonds"], ["value", "12"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.168091"], ["updated_at", "2019-05-29 00:25:50.168091"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 25], ["suit", "Diamonds"], ["value", "13"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.170355"], ["updated_at", "2019-05-29 00:25:50.170355"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 26], ["suit", "Diamonds"], ["value", "14"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.172844"], ["updated_at", "2019-05-29 00:25:50.172844"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 27], ["suit", "Hearts"], ["value", "2"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.175012"], ["updated_at", "2019-05-29 00:25:50.175012"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 28], ["suit", "Hearts"], ["value", "3"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.177431"], ["updated_at", "2019-05-29 00:25:50.177431"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 29], ["suit", "Hearts"], ["value", "4"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.180004"], ["updated_at", "2019-05-29 00:25:50.180004"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 30], ["suit", "Hearts"], ["value", "5"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.182116"], ["updated_at", "2019-05-29 00:25:50.182116"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 31], ["suit", "Hearts"], ["value", "6"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.184351"], ["updated_at", "2019-05-29 00:25:50.184351"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 32], ["suit", "Hearts"], ["value", "7"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.186413"], ["updated_at", "2019-05-29 00:25:50.186413"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 33], ["suit", "Hearts"], ["value", "8"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.188548"], ["updated_at", "2019-05-29 00:25:50.188548"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:42
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 34], ["suit", "Hearts"], ["value", "9"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.190909"], ["updated_at", "2019-05-29 00:25:50.190909"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 35], ["suit", "Hearts"], ["value", "10"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.192890"], ["updated_at", "2019-05-29 00:25:50.192890"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 36], ["suit", "Hearts"], ["value", "11"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.194969"], ["updated_at", "2019-05-29 00:25:50.194969"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 37], ["suit", "Hearts"], ["value", "12"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.197050"], ["updated_at", "2019-05-29 00:25:50.197050"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 38], ["suit", "Hearts"], ["value", "13"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.198976"], ["updated_at", "2019-05-29 00:25:50.198976"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 39], ["suit", "Hearts"], ["value", "14"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.224207"], ["updated_at", "2019-05-29 00:25:50.224207"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:48
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 40], ["suit", "Spades"], ["value", "2"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.227400"], ["updated_at", "2019-05-29 00:25:50.227400"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 41], ["suit", "Spades"], ["value", "3"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.229600"], ["updated_at", "2019-05-29 00:25:50.229600"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 42], ["suit", "Spades"], ["value", "4"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.232132"], ["updated_at", "2019-05-29 00:25:50.232132"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:51
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 43], ["suit", "Spades"], ["value", "5"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.234737"], ["updated_at", "2019-05-29 00:25:50.234737"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:52
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 44], ["suit", "Spades"], ["value", "6"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.237516"], ["updated_at", "2019-05-29 00:25:50.237516"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 45], ["suit", "Spades"], ["value", "7"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.239508"], ["updated_at", "2019-05-29 00:25:50.239508"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:54
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 46], ["suit", "Spades"], ["value", "8"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.241698"], ["updated_at", "2019-05-29 00:25:50.241698"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 47], ["suit", "Spades"], ["value", "9"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.243766"], ["updated_at", "2019-05-29 00:25:50.243766"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 48], ["suit", "Spades"], ["value", "10"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.245702"], ["updated_at", "2019-05-29 00:25:50.245702"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 49], ["suit", "Spades"], ["value", "11"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.247819"], ["updated_at", "2019-05-29 00:25:50.247819"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 50], ["suit", "Spades"], ["value", "12"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.249697"], ["updated_at", "2019-05-29 00:25:50.249697"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 51], ["suit", "Spades"], ["value", "13"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.251566"], ["updated_at", "2019-05-29 00:25:50.251566"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 52], ["suit", "Spades"], ["value", "14"], ["is_dealt", 0], ["created_at", "2019-05-29 00:25:50.253405"], ["updated_at", "2019-05-29 00:25:50.253405"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:64
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["name", "Alex"], ["username", "test"], ["created_at", "2019-05-29 00:25:50.265235"], ["updated_at", "2019-05-29 00:25:50.265235"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/akite/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("id", "suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["suit", "Clubs"], ["value", "2"], ["is_dealt", 0], ["created_at", "2019-05-29 00:26:14.323385"], ["updated_at", "2019-05-29 00:26:14.323385"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mHand Load (0.4ms)[0m  [1m[34mSELECT  "hands".* FROM "hands" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mHand Load (0.2ms)[0m  [1m[34mSELECT  "hands".* FROM "hands" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "hands"[0m
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (9.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCard Update All (0.1ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = 0[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE (is_dealt = true) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE (is_dealt = true)[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE (is_dealt = true) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE (is_dealt = true) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE (is_dealt = true) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE (is_dealt = true) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.4ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:18.991863"], ["id", 49]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:18.995207"], ["id", 22]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.2ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:18.997080"], ["id", 48]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:18.998725"], ["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:19.000765"], ["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE (is_dealt = true) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE (is_dealt = true)[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.4ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:34.981293"], ["id", 42]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:34.983932"], ["id", 19]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:34.985943"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:34.987901"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:34.989673"], ["id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.390015"], ["id", 17]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.392480"], ["id", 35]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.394413"], ["id", 30]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.396268"], ["id", 40]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.2ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.398014"], ["id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.659021"], ["id", 18]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.661605"], ["id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.663517"], ["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.665321"], ["id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.667129"], ["id", 33]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.928506"], ["id", 28]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.930588"], ["id", 34]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.932385"], ["id", 23]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.934195"], ["id", 51]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:35.936025"], ["id", 41]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.165009"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.4ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.167629"], ["id", 32]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.169630"], ["id", 25]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.5ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.171544"], ["id", 47]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.174187"], ["id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.427781"], ["id", 29]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.430191"], ["id", 13]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.432066"], ["id", 45]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.433888"], ["id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.435701"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.693125"], ["id", 14]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.695288"], ["id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.697163"], ["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.699059"], ["id", 46]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.4ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.700934"], ["id", 38]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.971267"], ["id", 50]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.973266"], ["id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.974971"], ["id", 44]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.976642"], ["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:36.978293"], ["id", 36]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:37.348592"], ["id", 52]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.4ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:37.351409"], ["id", 24]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:37.353597"], ["id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:37.355379"], ["id", 39]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:37.357222"], ["id", 37]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:37.787465"], ["id", 43]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Update (0.3ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["is_dealt", 1], ["updated_at", "2019-05-29 00:42:37.790001"], ["id", 27]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE (is_dealt = false)[0m
+  [1m[36mCard Update All (1.2ms)[0m  [1m[33mUPDATE "cards" SET "is_dealt" = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE (is_dealt = true)[0m
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m

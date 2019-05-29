@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_185758) do
+ActiveRecord::Schema.define(version: 2019_05_28_231403) do
 
   create_table "cards", force: :cascade do |t|
     t.string "suit"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 2019_05_28_185758) do
     t.boolean "is_dealt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "hand_cards", force: :cascade do |t|
+    t.integer "card_id"
+    t.integer "hand_id"
+    t.index ["card_id"], name: "index_hand_cards_on_card_id"
+    t.index ["hand_id"], name: "index_hand_cards_on_hand_id"
   end
 
   create_table "hands", force: :cascade do |t|
@@ -33,13 +40,6 @@ ActiveRecord::Schema.define(version: 2019_05_28_185758) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "active"
-  end
-
-  create_table "table_card_hands", force: :cascade do |t|
-    t.integer "card_id"
-    t.integer "hand_id"
-    t.index ["card_id"], name: "index_table_card_hands_on_card_id"
-    t.index ["hand_id"], name: "index_table_card_hands_on_hand_id"
   end
 
   create_table "users", force: :cascade do |t|
