@@ -1555,3 +1555,285 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 88ms (Views: 79.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/users" for ::1 at 2019-05-28 13:40:05 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milandhar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 499ms (Views: 480.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-28 13:40:11 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 170ms (Views: 164.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-05-28 13:47:53 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milandhar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xVX7kjJAHU0rKZTKPnxadg8NX0grPDfT2HSS5o8FHr/K+d8CzTy25+HDw17L3qQDdd4E8KWrxw2wI55n625L1Q==", "user"=>{"username"=>"person4", "name"=>"person 4"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "person 4"], ["username", "person4"], ["points", 1000], ["created_at", "2019-05-28 20:47:53.907700"], ["updated_at", "2019-05-28 20:47:53.907700"]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 33ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/users/11" for ::1 at 2019-05-28 13:47:53 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 574ms (Views: 562.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-05-28 13:48:07 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 65ms (Views: 58.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mCard Load (1.6ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (2.5ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "hearts"], ["value", "5"], ["is_dealt", 1], ["created_at", "2019-05-28 23:06:30.120709"], ["updated_at", "2019-05-28 23:06:30.120709"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (4.7ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "spades"], ["value", "11"], ["is_dealt", 1], ["created_at", "2019-05-28 23:06:55.696025"], ["updated_at", "2019-05-28 23:06:55.696025"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (1.2ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "diamonds"], ["value", "11"], ["is_dealt", 1], ["created_at", "2019-05-28 23:07:08.928342"], ["updated_at", "2019-05-28 23:07:08.928342"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (1.0ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "spades"], ["value", "5"], ["is_dealt", 1], ["created_at", "2019-05-28 23:07:33.178878"], ["updated_at", "2019-05-28 23:07:33.178878"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (1.0ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "hearts"], ["value", "10"], ["is_dealt", 1], ["created_at", "2019-05-28 23:07:48.650849"], ["updated_at", "2019-05-28 23:07:48.650849"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.8ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "hearts"], ["value", "10"], ["is_dealt", 1], ["created_at", "2019-05-28 23:09:12.521547"], ["updated_at", "2019-05-28 23:09:12.521547"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milandhar/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "username", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["name", "Alex"], ["username", "test"], ["points", 1000], ["created_at", "2019-05-29 00:16:41.577860"], ["updated_at", "2019-05-29 00:16:41.577860"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milandhar/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "username", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["name", "Alex"], ["username", "test"], ["points", 1000], ["created_at", "2019-05-29 00:17:06.970762"], ["updated_at", "2019-05-29 00:17:06.970762"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milandhar/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (1.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCard Destroy (4.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCard Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCard Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCard Destroy (2.0ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCard Destroy (0.7ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCard Destroy (0.7ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "username", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["name", "Alex"], ["username", "test"], ["points", 1000], ["created_at", "2019-05-29 00:18:43.294805"], ["updated_at", "2019-05-29 00:18:43.294805"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCard Create (0.7ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "hearts"], ["value", "5"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.339940"], ["updated_at", "2019-05-29 00:18:43.339940"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCard Create (0.6ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "spades"], ["value", "11"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.343527"], ["updated_at", "2019-05-29 00:18:43.343527"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "diamonds"], ["value", "11"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.346777"], ["updated_at", "2019-05-29 00:18:43.346777"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCard Create (0.9ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "clubs"], ["value", "5"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.351902"], ["updated_at", "2019-05-29 00:18:43.351902"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "hearts"], ["value", "10"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.357433"], ["updated_at", "2019-05-29 00:18:43.357433"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCard Create (0.8ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "spades"], ["value", "8"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.377990"], ["updated_at", "2019-05-29 00:18:43.377990"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mCard Create (0.9ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "diamonds"], ["value", "9"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.382462"], ["updated_at", "2019-05-29 00:18:43.382462"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCard Create (0.9ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "diamonds"], ["value", "10"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.392388"], ["updated_at", "2019-05-29 00:18:43.392388"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCard Create (0.8ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "clubs"], ["value", "11"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.398796"], ["updated_at", "2019-05-29 00:18:43.398796"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCard Create (2.3ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "hearts"], ["value", "12"], ["is_dealt", 1], ["created_at", "2019-05-29 00:18:43.403619"], ["updated_at", "2019-05-29 00:18:43.403619"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (1.0ms)[0m  [1m[32mINSERT INTO "cards" ("suit", "value", "is_dealt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["suit", "spades"], ["value", "8"], ["is_dealt", 1], ["created_at", "2019-05-29 00:25:11.727230"], ["updated_at", "2019-05-29 00:25:11.727230"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCard Load (1.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards"[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
