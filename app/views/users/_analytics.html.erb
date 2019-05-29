@@ -9,9 +9,9 @@
 
 <h3>Total Points: <%= @user.points %> </h3>
 <h3>Rounds Played: <%= @user.rounds.count %> </h3>
-<h3>Win Streak: <%= %> </h3>
+<h3>Win Streak: <%=@user.win_streak %> </h3>
 <h3>Percent of Rounds Won: <%= %> </h3>
-<h3>Percent of Folds: <%= %> </h3>
+<h3>Percent of Folds: <%= @user.win_streak %> </h3>
 
 
 <h3>Round Details: </h3>

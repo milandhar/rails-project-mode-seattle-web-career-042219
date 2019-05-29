@@ -27,9 +27,7 @@ class UsersController < ApplicationController
     redirect_to @user
   end
 
-  # def analytics
-  #   @user = User.find(params[:id])
-  # end
+  
 
   private
   def user_params
