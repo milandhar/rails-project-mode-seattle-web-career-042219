@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/:id/analytics', to: 'users#analytics'
+  #get 'users/:id/analytics', to: 'users#analytics'
   resources :cards
   resources :hands
   resources :rounds

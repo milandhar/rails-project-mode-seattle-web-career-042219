@@ -1,11 +1,20 @@
-<h1><%= @user.username%>'s Stats: </h1>
+<% if @user.rounds.count > 0 %>
+
+<br>
+<br>
+<br>
+<br>
+
+<h2><%= @user.username%>'s Stats: </h2>
 
 <h3>Total Points: <%= @user.points %> </h3>
 <h3>Rounds Played: <%= @user.rounds.count %> </h3>
+<h3>Win Streak: <%= %> </h3>
+<h3>Percent of Rounds Won: <%= %> </h3>
+<h3>Percent of Folds: <%= %> </h3>
 
-<br>
-<% if @user.rounds.count > 0 %>
-<h2>Round Details: </h2>
+
+<h3>Round Details: </h3>
 
   <% r = 1 %>
   <% @user.rounds.all.each do |round| %>

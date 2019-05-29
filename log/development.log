@@ -8394,3 +8394,243 @@ Processing by UsersController#analytics as HTML
 Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users/1" for ::1 at 2019-05-29 11:26:13 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milandhar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:6
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:13
+  [1m[36mHand Load (0.3ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:14
+  Rendered users/_analytics.html.erb (107.6ms)
+  Rendered users/show.html.erb within layouts/application (115.9ms)
+Completed 200 OK in 677ms (Views: 636.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:26:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:6
+  [1m[36mRound Load (0.1ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:13
+  [1m[36mHand Load (0.2ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:14
+  Rendered users/_analytics.html.erb (5.7ms)
+  Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:27:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:6
+  [1m[36mRound Load (0.1ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:12
+  [1m[36mHand Load (0.2ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:13
+  Rendered users/_analytics.html.erb (5.0ms)
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:27:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:9
+  [1m[36mRound Load (0.1ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:15
+  [1m[36mHand Load (0.1ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:16
+  Rendered users/_analytics.html.erb (5.6ms)
+  Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:27:18 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:11
+  [1m[36mRound Load (0.1ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:17
+  [1m[36mHand Load (0.1ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:18
+  Rendered users/_analytics.html.erb (6.0ms)
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-05-29 11:27:24 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 56ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/analytics" for ::1 at 2019-05-29 11:27:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/analytics"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2019-05-29 11:27:27 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-05-29 11:27:46 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:27:47 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:11
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:17
+  [1m[36mHand Load (0.2ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:18
+  Rendered users/_analytics.html.erb (14.7ms)
+  Rendered users/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 77ms (Views: 70.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:29:18 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:11
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:19
+  [1m[36mHand Load (0.2ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:20
+  Rendered users/_analytics.html.erb (6.1ms)
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:48:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:11
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:20
+  [1m[36mHand Load (0.2ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:21
+  Rendered users/_analytics.html.erb (6.7ms)
+  Rendered users/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-29 11:49:12 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:11
+  [1m[36mRound Load (0.1ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:20
+  [1m[36mHand Load (0.2ms)[0m  [1m[34mSELECT "hands".* FROM "hands" WHERE "hands"."round_id" = ?[0m  [["round_id", 1]]
+  ↳ app/views/users/_analytics.html.erb:21
+  Rendered users/_analytics.html.erb (5.1ms)
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-05-29 11:49:20 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 80ms (Views: 67.4ms | ActiveRecord: 9.6ms)
+
+
