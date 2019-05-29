@@ -24,28 +24,10 @@ class Hand < ApplicationRecord
     }.freeze
 
   def initialize(attributes_hash = {})
-    byebug
-    self.cards << Card.deal(5)
-    raise ArgumentError unless self.cards.count == 5
-    self.cards = self.cards.freeze
+    self.cards = Card.deal(5)
+    raise ArgumentError unless @cards.count == 5
+
   end
-
-  # def user_deal
-  #   5.times do
-  #   user_card_1 = Card.deal
-  #   self.cards << user_card_1
-  #   if
-  #   self.cards << Card.random
-  #   self.cards << Card.random
-  #   self.cards << Card.random
-  #   self.cards << Card.random
-  #   self.cards
-  # end
-  #
-  # def dealer_deal
-  #
-  # end
-
 
   # The hand's rank as an array containing the hand's
   # type and that type's base score
@@ -181,9 +163,5 @@ class Hand < ApplicationRecord
       (from...from + 5).to_a
     end
 
-<<<<<<< HEAD
-end
-=======
 
-  end
->>>>>>> 052c53c5ec1d524bf9c0793f2ad31fedac9ae14d
+end

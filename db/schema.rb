@@ -10,12 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_05_28_231403) do
-=======
 
-ActiveRecord::Schema.define(version: 2019_05_28_185758) do
->>>>>>> 052c53c5ec1d524bf9c0793f2ad31fedac9ae14d
 
   create_table "cards", force: :cascade do |t|
     t.string "suit"
@@ -53,6 +49,6 @@ ActiveRecord::Schema.define(version: 2019_05_28_185758) do
     t.integer "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
+  end 
 
 end
