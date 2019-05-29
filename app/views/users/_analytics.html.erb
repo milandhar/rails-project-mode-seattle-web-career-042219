@@ -1,9 +1,7 @@
 <% if @user.rounds.count > 0 %>
 
-<br>
-<br>
-<br>
-<br>
+<div class="analytics">
+
 
 <h2><%= @user.username%>'s Stats: </h2>
 
@@ -14,7 +12,7 @@
 <h3>Percent of Folds: <%= @user.win_streak %> </h3>
 
 
-<h3>Round Details: </h3>
+<h2>Round Details: </h2>
 
   <% r = 1 %>
   <% @user.rounds.all.each do |round| %>
@@ -37,3 +35,5 @@
   <% end %>
 
 <% end %>
+
+</div>
