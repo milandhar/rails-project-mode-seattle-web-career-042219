@@ -1,0 +1,30 @@
+<h1><%= @user.username%>'s Stats: </h1>
+
+<h3>Total Points: <%= @user.points %> </h3>
+<h3>Rounds Played: <%= @user.rounds.count %> </h3>
+
+<br>
+<% if @user.rounds.count > 0 %>
+<h2>Round Details: </h2>
+
+  <% r = 1 %>
+  <% @user.rounds.all.each do |round| %>
+    <% if round.hands == 2 %>
+    <h4>Round<%=r %> </h4>
+
+
+    player_hand = <% round.hands.find_by(is_player_hand: true) %>
+
+    dealer_hand = <% round.hands.find_by(is_player_hand: false)%>
+
+    <h5>Hand Types</h5>
+    <ul>
+      <li><%=@user.username%>: <%=player_hand.type%>  </li>
+      <li>Dealer: <%=dealer_hand.type%></li>
+    </ul>
+
+    <% r+= 1 %>
+    <% end %>
+  <% end %>
+
+<% end %>

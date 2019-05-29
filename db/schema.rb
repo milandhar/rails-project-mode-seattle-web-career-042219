@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_05_28_231403) do
 
-
   create_table "cards", force: :cascade do |t|
     t.string "suit"
     t.string "value"
@@ -49,6 +48,6 @@ ActiveRecord::Schema.define(version: 2019_05_28_231403) do
     t.integer "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end 
+  end
 
 end

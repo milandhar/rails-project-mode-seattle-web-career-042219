@@ -162,8 +162,4 @@ class Hand < ApplicationRecord
       (from...from + 5).to_a
     end
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 265153fbeba34818858c35edfca3beef5098e6b4
 end
