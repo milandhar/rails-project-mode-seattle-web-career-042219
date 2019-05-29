@@ -1,6 +1,6 @@
 class Card < ApplicationRecord
-  has_many :card_hands
-  has_many :hands, through: :card_hands
+  has_many :hand_cards
+  has_many :hands, through: :hand_cards
 
   def display_face
     case self.value
