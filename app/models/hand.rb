@@ -3,8 +3,13 @@ class Hand < ApplicationRecord
   has_many :hand_cards
   has_many :cards, through: :hand_cards
 
+  def dealer_card_reveal
+    self.cards.last.short
+  end
+
+
   def sort_by_face
-    self.sort_by {|c| [c.face, c.suit] }.reverse
+    self.cards.sort_by {|c| [c.value, c.suit] }
   end
 
   def show_short

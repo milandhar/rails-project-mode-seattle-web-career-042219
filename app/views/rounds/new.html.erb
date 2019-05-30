@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+
+    <div class="parent">
+      <div class="row">
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+      </div>
+      <div class="row">
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+
+        <%= image_tag("card-back.png", :size => "100x150") %>
+      </div>
+    </div>
+    <%= form_for @round do |f| %>
+  	<%= f.label :ante_amount %>
+  	<%= f.text_field :ante_amount %>
+
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+    <%= f.hidden_field :status, :value => "active" %>
+  	<%= f.submit ["Deal!"] %>
+  <%end%>
+  </body>
+</html>
