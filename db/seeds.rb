@@ -6,9 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Card.destroy_all
-
-
-
 CARDLIST= [
   Card.create(id: 1, value: 2, suit: "Clubs", is_dealt: false),
   Card.create(id: 2, value: 3, suit: "Clubs", is_dealt: false),
@@ -64,8 +61,11 @@ CARDLIST= [
   Card.create(id: 52, value: 14, suit: "Spades", is_dealt: false),
 
 ]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4af2fdf7437a0cf28e7254407bde2166007c6f7b
 testuser = User.find_or_create_by(id: 1, name:"Alex", username: "test", points: 1000)
-testround = Round.find_or_create_by(id: 1, user_id: 1, ante_amount: 5, active: true)
+testround = Round.find_or_create_by(id: 1, user_id: 1, ante_amount: 5, status: "active")
 testuserhand = Hand.find_or_create_by(id: 2, round_id: 1, is_player_hand: true)
 testdealerhand = Hand.find_or_create_by(id: 3, round_id: 1, is_player_hand: false)

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {background-color: lightblue;}
+    </style>
+  </head>
+  <body>
+    <h1><%=@user.username%></h1> <h2>Total Points:<%=@user.points%><br> Current Ante:<%=@round.ante_amount%> </h2>
+    <div class="parent">
+      <div class="row">
+        <%= image_tag("card-back.png", :size => "100x150") %>
+        <%= image_tag("card-back.png", :size => "100x150") %>
+        <%= image_tag("card-back.png", :size => "100x150") %>
+        <%= image_tag("card-back.png", :size => "100x150") %>
+        <%= image_tag("card-images/#{@d_hand.dealer_card_reveal}.png", :size => "100x150") %>
+      </div>
+      <div class="row">
+          <% @p_cards.each do |c| %>
+          <%= image_tag("card-images/#{c.short}.png", :size => "100x150") %>
+        <%end%>
+      </div>
+    </div>
+    
+  <%= form_for @round do |f| %>
+  	<%= f.hidden_field :status, :value => "bet"%>
+  	<%= f.submit ["Bet"] %>
+    Wager twice the ante that your hand will beat the dealer's
+  <%end%>
+  <%= form_for @round do |f| %>
+    <%= f.hidden_field :status, :value => "fold"%>
+    <%= f.submit ["Fold"] %>
+    Forfeit your ante but do not bet more
+  <%end%>
+  </body>
+</html>

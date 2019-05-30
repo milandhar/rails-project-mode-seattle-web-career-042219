@@ -1,15 +1,20 @@
-<h1><%= @user.username%>'s Profile: </h1>
+<h1><%= @user.username%>'s Profile </h1>
 
-<ul>
-  <li>Name: <%= @user.name%></li>
-  <li>Points: <%= @user.points%></li>
+<div class="header">
+
+<ul class = "show_bullets">
+  <li class = "user_info">Name: <%= @user.name%></li>
+  <li class = "user_info">Points: <%= @user.points%></li>
 </ul>
 
 
-<br>
-<%= link_to "Edit Profile", edit_user_path %>
-<br>
-<br>
-<%= link_to "Back to Users List", users_path %>
+<ul class = "show_bullets">
+  <li class = "link_li"><%= link_to "Start New Round", new_round_path %></li>
+  <li class = "link_li"><%= link_to "Edit Profile", edit_user_path %></li>
+  <li class = "link_li"><%= link_to "Back to Users List", users_path %></li>
+</ul>
 
-<%= render 'analytics'%> 
+</div>
+
+
+<%= render 'analytics'%>

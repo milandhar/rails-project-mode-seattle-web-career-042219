@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_224115) do
     t.integer "ante_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "active"
+    t.string "status"
   end
 
   create_table "users", force: :cascade do |t|
