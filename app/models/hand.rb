@@ -8,9 +8,8 @@ class Hand < ApplicationRecord
   end
 
 
-#ACES ARE LIKE 9.5 WHY, FIX IT
   def sort_by_face
-    self.cards.sort_by {|c| [c.face, c.suit] }
+    self.cards.sort_by {|c| [c.value, c.suit] }
   end
 
   def show_short
