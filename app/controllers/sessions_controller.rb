@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
 
   def login
-
   end
 
   def logout
@@ -17,7 +16,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
-      flash[:message] = "Incorrect Login"
+      flash[:message] = "Incorrect Login!"
       render :login
     end
   end

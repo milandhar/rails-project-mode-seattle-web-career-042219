@@ -97,13 +97,14 @@ label {
   justify-content: center;
   align-items: center;
   margin: auto;
+  text-align: center;
 }
 
 
-  input {
+  input[type = "Text"] {
   margin: 5px;
-  margin-left: 0px;
-  width: 55%;
+  margin-left: 5px;
+  width: 150px;
 }
 
 #username {
@@ -111,10 +112,6 @@ label {
 }
 
 
-#user_name {
-  margin-bottom: 15px;
-  margin-left: 29px;
-}
 
 #new-profile-link {
   margin-top: 20px;
@@ -129,18 +126,81 @@ label {
   justify-content: center;
   align-items: center;
   margin: auto;
+  text-align: center;
 }
 
+.edit-form input[type = "text"] {
+  // margin-left: 5px;
+}
 
 input[type = "submit"] {
-  width: 35%;
+  width: 70px;
+  margin-top: 8px;
+}
+
+.new_user input[type = "submit"] {
+
 }
 
 .flash-message {
+  margin-bottom: 10px;
   color: red;
+  text-align: center;
+}
+
+.flash-errors {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .create-profile-form a {
   margin-top: 10px;
   font-size: 12px;
+}
+
+.field_with_errors input{
+  border: 1px solid red;
+}
+
+.create-name {
+  height: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.create-username {
+  height: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.edit-name input {
+  margin-left: 30px;
+}
+
+.edit_user {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.edit-username {
+  height: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
 }
