@@ -64,7 +64,7 @@ CARDLIST= [
   Card.create(id: 52, value: 14, suit: "Spades", is_dealt: false),
 
 ]
-byebug
+
 testuser = User.find_or_create_by(id: 1, name:"Alex", username: "test", points: 1000)
 testround = Round.find_or_create_by(id: 1, user_id: 1, ante_amount: 5, active: true)
 testuserhand = Hand.find_or_create_by(id: 2, round_id: 1, is_player_hand: true)
