@@ -38,7 +38,7 @@ div {
 }
 
 .user_info {
-  display: block; 
+  display: block;
 }
 
 .user_info {
@@ -75,5 +75,15 @@ a:link  {
 
   margin-top: 100px;
   text-align: center;
+}
+
+.login-div form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-div  {
 
 }
