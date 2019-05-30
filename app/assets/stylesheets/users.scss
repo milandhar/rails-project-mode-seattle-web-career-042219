@@ -1,3 +1,79 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #009900;
+  height: 100%;
+}
+
+h1  {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+div {
+  margin: auto;
+  width: 200px;
+  display: block;
+}
+
+
+ .show_bullets {
+  list-style: none;
+}
+
+.link_li {
+  display: block;
+}
+
+.user_info {
+  display: block; 
+}
+
+.user_info {
+  font-size: 1.5em;
+}
+
+// li:before {
+//   content: '\2660';
+//   margin-left: -20px;
+//   margin-right: 10px;
+// }
+
+.link_li:before {
+  content: '\2660';
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+
+a {
+  color: #0000EE;
+}
+
+a:link  {
+  text-decoration: none;
+}
+
+.header {
+  margin-top: 50px;
+}
+
+
+.analytics {
+
+  margin-top: 100px;
+  text-align: center;
+
+}
