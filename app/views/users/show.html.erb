@@ -1,5 +1,8 @@
-<h1><%= @user.username%>'s Profile </h1>
-
+<% if session[:user_id] == @user.id %>
+<h1>Welcome, <%= @user.username%>!</h1>
+<% else %>
+<h1><%= @user.username%>'s Profile</h1>
+<% end %>
 <div class="header">
 
 <ul class = "show_bullets">
@@ -9,9 +12,12 @@
 
 
 <ul class = "show_bullets">
+  <% if session[:user_id] == @user.id %>
   <li class = "link_li"><%= link_to "Start New Round", new_round_path %></li>
+  <% end %>
   <li class = "link_li"><%= link_to "Edit Profile", edit_user_path %></li>
   <li class = "link_li"><%= link_to "Back to Users List", users_path %></li>
+  <li class = "link_li"><%= link_to "Log Out", logout_path %></li>
 </ul>
 
 </div>

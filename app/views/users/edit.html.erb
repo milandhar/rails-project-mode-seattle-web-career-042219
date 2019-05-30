@@ -1,10 +1,19 @@
 <h1>Edit <%= @user.username%>'s Profile:</h1>
 
+<div class="edit-form">
+
 <%= form_for @user do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
+<div class="edit-username">
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+</div>
+
+<div class="edit-name">
 <%= f.label :name %>
 <%= f.text_field :name %>
+</div>
 
 <%= f.submit "Edit" %>
 <% end %>
+
+</div>

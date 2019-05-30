@@ -15,6 +15,8 @@ class User < ApplicationRecord
     end
   end
 
+
+  ## The following Analytics methods will be filled in once the round logic is complete
   def win_streak
     i = 0
     # while i < self.rounds.all.count

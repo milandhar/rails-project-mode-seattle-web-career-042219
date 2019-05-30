@@ -5,11 +5,13 @@ class RoundsController < ApplicationController
   end
 
   def new
+    if logged_in? == false
+      redirect_user
+    end
     @round = Round.new
     @cards = Card.all
     # form will be needed for user_id(static), based on login, ante_amount(chosen),
     # status(always active, will be changed in edit)
-
   end
 
   def create

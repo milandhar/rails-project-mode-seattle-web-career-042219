@@ -1,3 +1,11 @@
 // Place all the styles related to the Rounds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new_round input {
+  width: 120px;
+}
+
+.edit_round input[type="submit"] {
+  width: 60px;
+}

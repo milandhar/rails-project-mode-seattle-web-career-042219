@@ -1,9 +1,4 @@
-<% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash-#{key}" %>
-<% end %>
-
-
-<h1>Log In To Your Profile</h1>
+<h1><%= @user.username %> Has Been Logged Out! </h1>
 
 <div class="login-div">
 
