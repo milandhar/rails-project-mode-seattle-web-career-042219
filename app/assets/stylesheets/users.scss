@@ -103,7 +103,7 @@ label {
 
   input[type = "Text"] {
   margin: 5px;
-  margin-left: 5px;
+  margin-left: 0px;
   width: 150px;
 }
 
@@ -150,6 +150,11 @@ input[type = "submit"] {
 
 .flash-errors {
   color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.flash-success {
   text-align: center;
   margin-bottom: 10px;
 }
