@@ -1,10 +1,21 @@
 <h1>Create User Profile:</h1>
 
+<div class="create-profile-form">
+
 <%= form_for @user do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<%= f.label :name %>
-<%= f.text_field :name %>
+<div class="create-username">
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+</div>
+
+<div class="create-name">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
 
 <%= f.submit "Create" %>
 <% end %>
+
+<a href="/login">Login Page</a>
+
+</div>

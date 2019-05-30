@@ -1,6 +1,9 @@
+<h4>Logged in as <%= @current_user.username %></h4>
+<a href="/logout">Log Out</a>
+
 <h1>All Users:</h1>
 <% i = 1 %>
-<% @users.each do |user| %>
+<% @ordered_users.each do |user| %>
   <h2><%= i%>. <%= link_to user.username, user  %></h2>
   <ul>
     <li class = "index_bullets">Name: <%= user.name %> </li>

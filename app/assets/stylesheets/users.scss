@@ -22,15 +22,9 @@ h2 {
   margin-top: 40px;
 }
 
-div {
-  margin: auto;
-  width: 200px;
-  display: block;
-}
-
-
  .show_bullets {
   list-style: none;
+  width: 500px;
 }
 
 .link_li {
@@ -38,18 +32,13 @@ div {
 }
 
 .user_info {
-  display: block; 
+  display: block;
 }
 
 .user_info {
   font-size: 1.5em;
 }
 
-// li:before {
-//   content: '\2660';
-//   margin-left: -20px;
-//   margin-right: 10px;
-// }
 
 .link_li:before {
   content: '\2660';
@@ -67,13 +56,91 @@ a:link  {
 }
 
 .header {
+  margin: auto;
+  width: 200px;
   margin-top: 50px;
+  display: block;
+}
+
+.analytics {
+  margin: auto;
+}
+
+.header ul {
+      padding-inline-start: 0px;
+}
+
+label {
+  color: #FFF
+}
+
+.analytics {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.login-div {
+  height: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.create-profile-form{
+  height: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 
-.analytics {
+  input {
+  margin: 5px;
+  margin-left: 0px;
+  width: 55%;
+}
 
-  margin-top: 100px;
-  text-align: center;
+#username {
+  width: 80%;
+}
 
+
+#user_name {
+  margin-bottom: 15px;
+  margin-left: 29px;
+}
+
+#new-profile-link {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.edit-form {
+  height: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+
+input[type = "submit"] {
+  width: 35%;
+}
+
+.flash-message {
+  color: red;
+}
+
+.create-profile-form a {
+  margin-top: 10px;
+  font-size: 12px;
 }

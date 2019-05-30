@@ -3,13 +3,18 @@ class UsersController < ApplicationController
   def index
 
     if logged_in?
+      @current_user = User.find(session[:user_id])
       @users = User.all
+      @ordered_users = @users.sort_by{|user| user.username}
     else
-      redirect_to new_user_path
+      redirect_user
     end
   end
 
   def show
+    if logged_in? == false
+      redirect_user
+    end
     #@user = User.find(params[:id])
   end
 
@@ -19,15 +24,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    redirect_to @user
+    redirect_to login_path
   end
 
   def edit
-    #@user = User.find(params[:id])
   end
 
   def update
-    #@user = User.find(params[:id])
     @user.update(user_params)
     redirect_to @user
   end

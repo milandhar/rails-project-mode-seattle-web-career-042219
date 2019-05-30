@@ -1,9 +1,13 @@
-<% if @user.rounds.count > 0 %>
+<% if @user.rounds.count == 0 %>
+<div class="analytics">
+<h1><%=@user.username%> Hasn't Played Any Rounds! </h1>
+</div>
+<% elsif @user.rounds.count > 0 %>
 
 <div class="analytics">
 
 
-<h2><%= @user.username%>'s Stats: </h2>
+<h1><%= @user.username%>'s Stats: </h1>
 
 <h3>Total Points: <%= @user.points %> </h3>
 <h3>Rounds Played: <%= @user.rounds.count %> </h3>
