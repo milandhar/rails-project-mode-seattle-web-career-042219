@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Profile Created Sucessfully"
+      flash.now.alert = "Profile Created Sucessfully"
 
       redirect_to @user
     else
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def update
 
     if @user.update(user_params)
-      flash[:success] = "Profile Created Sucessfully"
+      flash.now.alert = "Profile Created Sucessfully"
       redirect_to @user
     else
       flash.now.alert = "Please Select a Different Username"

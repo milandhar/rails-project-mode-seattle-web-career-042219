@@ -6,7 +6,7 @@
   <%= image_tag("card-back.png", :size => "150x225") %>
 </div>
 
-  
+
 </div>
 <% elsif @user.rounds.count > 0 %>
 
@@ -18,27 +18,32 @@
 <h3>Total Points: <%= @user.points %> </h3>
 <h3>Rounds Played: <%= @user.rounds.count %> </h3>
 <h3>Win Streak: <%=@user.win_streak %> </h3>
-<h3>Percent of Rounds Won: <%= %> </h3>
-<h3>Percent of Folds: <%= @user.win_streak %> </h3>
+<h3>Percent Rounds Won: <%= @user.win_percentage %> </h3>
+<h3>Percent Rounds Lost: <%= @user.lose_percentage %> </h3>
+<h3>Percent Rounds Folded: <%= @user.fold_percentage %> </h3>
 
 
 <h2>Round Details: </h2>
 
   <% r = 1 %>
-  <% @user.rounds.all.each do |round| %>
-    <% if round.hands == 2 %>
-    <h4>Round<%=r %> </h4>
+
+  <% @user.rounds.each do |round| %>
+
+    <% if round.hands.count == 2 %>
+    <h3>Round <%= r %> </h3>
 
 
-    player_hand = <% round.hands.find_by(is_player_hand: true) %>
+    <% player_hand =  round.hands.find_by(is_player_hand: true) %>
 
-    dealer_hand = <% round.hands.find_by(is_player_hand: false)%>
+    <% dealer_hand =  round.hands.find_by(is_player_hand: false)%>
 
-    <h5>Hand Types</h5>
+    <h4>Ante Amount: <%=round.ante_amount %> </h4>
     <ul>
       <li><%=@user.username%>: <%=player_hand.type%>  </li>
       <li>Dealer: <%=dealer_hand.type%></li>
     </ul>
+
+    <h4>Outcome: <%= round.status %> </h4>
 
     <% r+= 1 %>
     <% end %>

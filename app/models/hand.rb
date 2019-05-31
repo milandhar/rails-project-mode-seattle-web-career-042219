@@ -3,7 +3,9 @@ class Hand < ApplicationRecord
   has_many :hand_cards
   has_many :cards, through: :hand_cards
 
+#used ranking and type methods from:
 #https://codereview.stackexchange.com/questions/37165/weekend-challenge-ruby-poker-hand-evaluation
+
   ACE_LOW  = 1
   ACE_HIGH = 14
 
