@@ -39,8 +39,8 @@
 
     <h4>Ante Amount: <%=round.ante_amount %> </h4>
     <ul>
-      <li><%=@user.username%>: <%=player_hand.type%>  </li>
-      <li>Dealer: <%=dealer_hand.type%></li>
+      <li><%=@user.username%>: <%=player_hand.rank_display%>  </li>
+      <li>Dealer: <%=dealer_hand.rank_display%></li>
     </ul>
 
     <h4>Outcome: <%= round.status %> </h4>

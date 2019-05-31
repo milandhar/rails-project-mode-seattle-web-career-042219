@@ -48,7 +48,7 @@ class Hand < ApplicationRecord
   end
 
   def rank_display
-    self.rank[0].to_s.split("_").join(" ").upcase
+    self.type.to_s.split("_").join(" ").upcase
   end
 
   def d_rank_display
