@@ -23,19 +23,31 @@
 <h3>Percent Rounds Folded: <%= @user.fold_percentage %> </h3>
 
 
+<div class="round_analysis">
 <h2>Round Details: </h2>
 
   <% r = 1 %>
+  <table>
+
+    <tr>
+      <th>Round Number</th>
+      <th>Ante Amount</th>
+      <th><%=@user.username%> Hand</th>
+      <th>Dealer Hand</th>
+      <th>Outcome</th>
+    </tr>
 
   <% @user.rounds.each do |round| %>
+  <tr>
 
     <% if round.hands.count == 2 %>
-    <h3>Round <%= r %> </h3>
+    <td> <%= r %> </td>
 
 
     <% player_hand =  round.hands.find_by(is_player_hand: true) %>
 
     <% dealer_hand =  round.hands.find_by(is_player_hand: false)%>
+
 
     <h4>Ante Amount: <%=round.ante_amount %> </h4>
     <ul>
@@ -43,12 +55,15 @@
       <li>Dealer: <%=dealer_hand.rank_display%></li>
     </ul>
 
-    <h4>Outcome: <%= round.status %> </h4>
+
+    </tr>
 
     <% r+= 1 %>
     <% end %>
   <% end %>
-
+</table>
+</div>
 <% end %>
+
 
 </div>

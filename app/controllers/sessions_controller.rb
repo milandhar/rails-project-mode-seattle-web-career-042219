@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def login
+    byebug
   end
 
   def logout
