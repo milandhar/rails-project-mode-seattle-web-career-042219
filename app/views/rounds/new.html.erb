@@ -24,9 +24,11 @@
     </style>
   </head>
   <body>
+    <div class="wrapper">
+
     <div class="parent" style="width: 800px; margin: 0 auto;">
       <div class="pseudoheader">
-      <h1><%=@user.username%></h1> <h2>Total Points:<%=@user.points%><br> Ante:<br>
+      <h1><%=@user.username%></h1> <h2>Total Points: <%=@user.points%><br> Ante:<br>
       Bet:</h2>
       </div> <br>
       <div class="hands" style="float: right;">
@@ -58,7 +60,7 @@
       EVERYTHING ELSE...............1 to 1<br>
       <strong>*DEALER QUALIFIES WITH A+K*</strong>
     </div>
-  </div>
+
     <%= form_for @round do |f| %>
     <div class="ante-div clear">
 
@@ -74,5 +76,7 @@
     <%= f.hidden_field :status, :value => "active" %>
   	<%= f.submit ["Deal!"] %>
   <%end%>
+  </div>
+  </div>
   </body>
 </html>

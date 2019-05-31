@@ -25,8 +25,9 @@ class User < ApplicationRecord
   ## The following Analytics methods will be filled in once the round logic is complete
   def win_streak
     i = 0
-    while i < self.rounds.count
-      if (self.rounds[i].status == "won")
+    reverse_rounds = self.rounds.reverse
+    while i < reverse_rounds.count
+      if (reverse_rounds[i].status == "win")
         i += 1
       else
         break

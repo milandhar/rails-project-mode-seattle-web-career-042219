@@ -327,3 +327,43 @@ th {
 td {
   padding: 7px;
 }
+
+.ante-div.clear {
+  margin-top: 20px;
+  padding-top: 30px;
+}
+
+.wrapper {
+  display: grid;
+}
+
+.labelheader {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.labelheader h3 {
+  margin-left: 8px;
+  padding-bottom: 6px;
+}
+
+.pseudoheader {
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.pseudoheader h2 {
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+.greenheader {
+  color: green;
+}
+
+.redheader {
+  color: red;
+}
