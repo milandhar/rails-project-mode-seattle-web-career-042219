@@ -1,3 +1,6 @@
+<h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
+<a href="/logout">Log Out</a>
+
 <% if session[:user_id] == @user.id %>
 <h1>Welcome, <%= @user.username%>!</h1>
 <% else %>
@@ -14,10 +17,10 @@
 <ul class = "show_bullets">
   <% if session[:user_id] == @user.id %>
   <li class = "link_li"><%= link_to "Start New Round", new_round_path %></li>
-  <% end %>
   <li class = "link_li"><%= link_to "Edit Profile", edit_user_path %></li>
-  <li class = "link_li"><%= link_to "Go to Users List", users_path %></li>
   <li class = "link_li"><%= link_to "Log Out", logout_path %></li>
+  <% end %>
+  <li class = "link_li"><%= link_to "Go to Users List", users_path %></li>
 </ul>
 
 </div>

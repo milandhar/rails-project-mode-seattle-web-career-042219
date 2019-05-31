@@ -4,8 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def logout
-    @user = User.find(session[:user_id])
-    session[:user_id] = nil
+    if session[:user_id] != nil
+      @user = User.find(session[:user_id])
+      session[:user_id] = nil
+    end
   end
 
 
@@ -16,7 +18,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
-      flash[:message] = "Incorrect Login!"
+      flash.now.alert = "Incorrect Login!"
       render :login
     end
   end

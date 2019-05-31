@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   def index
 
     if logged_in?
-      @current_user = User.find(session[:user_id])
       @users = User.all
       @ordered_users = @users.sort_by{|user| user.username}
     else
@@ -29,7 +28,7 @@ class UsersController < ApplicationController
 
       redirect_to @user
     else
-      flash[:errors] = "Please Select a Different Username"
+      flash.now.alert = "Please Select a Different Username"
       render :new
     end
   end
@@ -43,7 +42,7 @@ class UsersController < ApplicationController
       flash[:success] = "Profile Created Sucessfully"
       redirect_to @user
     else
-      flash[:errors] = "Please Select a Different Username"
+      flash.now.alert = "Please Select a Different Username"
       render :edit
     end
 

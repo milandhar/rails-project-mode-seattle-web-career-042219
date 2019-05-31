@@ -1,6 +1,12 @@
 <% if @user.rounds.count == 0 %>
 <div class="analytics">
 <h1><%=@user.username%> Hasn't Played Any Rounds! </h1>
+
+<div class="card-bottom">
+  <%= image_tag("card-back.png", :size => "150x225") %>
+</div>
+
+  
 </div>
 <% elsif @user.rounds.count > 0 %>
 
