@@ -1,5 +1,7 @@
 <h1>Log In To Your Profile</h1>
 
+<div class="page-wrapper">
+
 <% flash.each do |key, value| %>
   <%= content_tag :div, value, class: "flash-#{key}" %>
 <% end %>
@@ -18,4 +20,6 @@
 
 <div class="card-bottom">
   <%= image_tag("card-back.png", :size => "150x225") %>
+</div>
+
 </div>

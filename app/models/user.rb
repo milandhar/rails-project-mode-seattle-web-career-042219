@@ -21,8 +21,6 @@ class User < ApplicationRecord
     self.points -= round.ante_amount
   end
 
-
-  ## The following Analytics methods will be filled in once the round logic is complete
   def win_streak
     i = 0
     reverse_rounds = self.rounds.reverse
