@@ -20,7 +20,7 @@ class Hand < ApplicationRecord
     self.cards.each{|c| puts c.long}
   end
 
-#used ranking and type methods from: 
+#used ranking and type methods from:
 #https://codereview.stackexchange.com/questions/37165/weekend-challenge-ruby-poker-hand-evaluation
 
   ACE_LOW  = 1
@@ -196,7 +196,7 @@ class Hand < ApplicationRecord
     # Generate an array of 5 consecutive values
     # starting with the `from` value
     def straight_values_from(from)
-      (from...from + 5).to_a
+      (from.to_i...from.to_i + 5).to_a
     end
 
 end

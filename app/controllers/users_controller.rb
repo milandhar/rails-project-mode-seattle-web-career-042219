@@ -14,7 +14,6 @@ class UsersController < ApplicationController
     if logged_in? == false
       redirect_user
     end
-    #@user = User.find(params[:id])
   end
 
   def new
@@ -25,8 +24,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash.now.alert = "Profile Created Sucessfully"
-
-      redirect_to @user
+      redirect_to login_path
     else
       flash.now.alert = "Please Select a Different Username"
       render :new
