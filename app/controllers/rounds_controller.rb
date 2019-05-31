@@ -9,6 +9,7 @@ class RoundsController < ApplicationController
       redirect_user
     end
     @round = Round.new
+    @user = User.find(session[:user_id])
     @cards = Card.all
     # form will be needed for user_id(static), based on login, ante_amount(chosen),
     # status(always active, will be changed in edit)
@@ -64,18 +65,16 @@ class RoundsController < ApplicationController
           #ante win/refund
           @user.points += @round.bet
           #dynamic win for different hands
-          @user.points += @round.bet
+          @user.points += (@round.bet * @p_hand.payout_multiplier)
           @round.status = 'win'
         else #LOSE
           @user.points -= @round.bet
           @round.status = 'lose'
         end
         @user.save
+      else
+        render :edit
       end
-
-
-        #error with round status
-
         redirect_to @round
     else
         #error here

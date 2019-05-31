@@ -3,29 +3,12 @@ class Hand < ApplicationRecord
   has_many :hand_cards
   has_many :cards, through: :hand_cards
 
-  def dealer_card_reveal
-    self.cards.last.short
-  end
-
-
-  def sort_by_face
-    self.cards.sort_by {|c| [c.value, c.suit] }
-  end
-
-  def show_short
-    self.cards.each{|c| puts c.short}
-  end
-
-  def show_long
-    self.cards.each{|c| puts c.long}
-  end
-
 #used ranking and type methods from: 
+
 #https://codereview.stackexchange.com/questions/37165/weekend-challenge-ruby-poker-hand-evaluation
 
   ACE_LOW  = 1
   ACE_HIGH = 14
-
 
   RANKS = {
       straight_flush:  8,
@@ -41,6 +24,22 @@ class Hand < ApplicationRecord
   def initialize(attributes_hash = {})
     super
     self.cards << Card.deal(5)
+  end
+
+  def dealer_card_reveal
+    self.cards.last.short
+  end
+
+  def sort_by_face
+    self.cards.sort_by {|c| [c.value, c.suit] }
+  end
+
+  def show_short
+    self.cards.each{|c| puts c.short}
+  end
+
+  def show_long
+    self.cards.each{|c| puts c.long}
   end
 
   # The hand's rank as an array containing the hand's
@@ -68,6 +67,35 @@ class Hand < ApplicationRecord
       return true
     else
       false
+    end
+  end
+
+  def payout_multiplier
+    case player_hand.rank[1]
+    when 8
+    #straight_flush
+      50
+    when 7
+    #four_of_a_kind
+      20
+    when 6
+    #full_house
+      7
+    when 5
+    #flush
+      5
+    when 4
+    #straight
+      4
+    when 3
+    #three_of_a_kind
+      3
+    when 2
+    #two_pair
+      2
+    else
+    #pair or less
+      1
     end
   end
 
