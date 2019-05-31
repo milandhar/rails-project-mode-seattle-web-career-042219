@@ -42,21 +42,35 @@ class RoundsController < ApplicationController
     @p_hand = @hands.find{|h| h.is_player_hand == true}
     @d_cards = @d_hand.cards
     @p_cards = @p_hand.sort_by_face
-
-    # update status to fold/"bet"
-    #
   end
 
   def update
     @round = Round.find(params[:id])
-    #win/lose logic needs to be enacted in here if status = 'bet'
+    @user = @round.user
+    @hands = @round.hands.to_a
+    @d_hand = @hands.find{|h| h.is_player_hand == false}
+    @p_hand = @hands.find{|h| h.is_player_hand == true}
     if @round.update(round_params())
       # byebug
       if @round.status == 'fold'
         #fold things
-
       elsif @round.status == 'bet'
         #determime win/lose, pay out, change status to win/lose
+        if !@d_hand.dealer_qualify?
+          #WIN ANTE, NO BET
+          @user.points += @round.bet
+          @round.status = 'win'
+        elsif @round.player_win?(@p_hand, @d_hand)
+          #ante win/refund
+          @user.points += @round.bet
+          #dynamic win for different hands
+          @user.points += @round.bet
+          @round.status = 'win'
+        else #LOSE
+          @user.points -= @round.bet
+          @round.status = 'lose'
+        end
+        @user.save
       end
 
 

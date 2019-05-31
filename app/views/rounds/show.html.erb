@@ -14,21 +14,40 @@
         font-size: 14px;
         line-height: 1.6;
       }
+      .button {
+        padding:5px;
+        background-color: #dcdcdc;
+        border: 1px solid #666;
+        color:#000;
+        text-decoration:none;
+        margin: 0 auto;
+      }
+      .clear {
+        clear: both;
+      }
+      .pseudoheader {
+        background-color: lightgrey;
+        padding: 1px 20px;
+      }
+
     </style>
   </head>
   <body>
     <div class="parent" style="width: 800px; margin: 0 auto;">
-      <h1> <%=@user.username%></h1>
-      <h2>Total Points:<%=@user.points%> <br> Ante:<%=@round.ante_amount%> <br>
-      Bet:
-        <%if @round.status == 'fold'%>
-          FOLD
-        <% elsif @round.status == nil || @round.status == 'active'%>
-          N/A
-        <% else%>
-          <%= @round.ante_amount * 2 %>
-        <% end %>
-      </h2>
+      <div class="pseudoheader">
+
+        <h1> <%=@user.username%></h1>
+        <h2>Total Points:<%=@user.points%> <br> Ante:<%=@round.ante_amount%> <br>
+          Bet:
+          <%if @round.status == 'fold'%>
+            FOLD
+          <% elsif @round.status == nil || @round.status == 'active'%>
+            N/A
+          <% else%>
+            <%= @round.bet %>
+          <% end %>
+        </h2>
+      </div><br>
       <div class="hands" style="float: right;">
       <div class="row">
         <% @d_cards.each do |c| %>
@@ -56,6 +75,11 @@
       EVERYTHING ELSE...............1 to 1<br>
       <strong>*DEALER QUALIFIES WITH A+K*</strong>
     </div>
+    </div>
+    <br><br>
+    <div class="clear">
+      <a class="button" href=new>Again!!</a>.... OR ....
+      <a class="button" href=../users/<%="#{@user.id}"%>>Return Home</a>
     </div>
   </body>
 </html>

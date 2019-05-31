@@ -4,15 +4,15 @@ class Card < ApplicationRecord
 
   def face
     case self.value
-    when "14"
+    when 14
       "Ace"
-    when "13"
+    when 13
       "King"
-    when "12"
+    when 12
       "Queen"
-    when "11"
+    when 11
       "Jack"
-    when "10"
+    when 10
       "Ten"
     else
       self.value.to_s
