@@ -1,3 +1,6 @@
+<h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
+<a href="/logout">Log Out</a>
+
 <h1>Edit <%= @user.username%>'s Profile:</h1>
 
 <div class="edit-form">

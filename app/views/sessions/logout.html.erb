@@ -1,5 +1,6 @@
 <h1><%= @user.username %> Has Been Logged Out! </h1>
 
+
 <div class="login-div">
 
 <%= form_tag '/login' do %>
@@ -10,4 +11,9 @@
 
 <a id = "new-profile-link" href="/users/new">Create New Profile</a>
 
+</div>
+
+
+<div class="card-bottom">
+  <%= image_tag("card-back.png", :size => "150x225") %>
 </div>
