@@ -16,6 +16,24 @@ class Round < ApplicationRecord
     Hand.create({round_id: self.id, is_player_hand: true})
   end
 
+  def bet
+    self.ante_amount * 2
+  end
+
+  def player_win?(player_hand, dealer_hand)
+    p = player_hand.score
+    d = dealer_hand.score
+    i = 0
+    while i < 7
+      if p[i] > d[i]
+        return true
+      elsif p[i] < d[i]
+        return false
+      else
+        i += 1
+      end
+    end
+  end
 
 
 end

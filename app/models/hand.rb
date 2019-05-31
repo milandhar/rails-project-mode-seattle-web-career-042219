@@ -9,7 +9,7 @@ class Hand < ApplicationRecord
 
 
   def sort_by_face
-    self.cards.sort_by {|c| [c.value.to_i, c.suit] }
+    self.cards.sort_by {|c| [c.value, c.suit] }
   end
 
   def show_short
@@ -62,7 +62,7 @@ class Hand < ApplicationRecord
   def dealer_qualify?
     if self.rank[1] != 0
       return true
-    elsif self.cards.find{|c| c.value == "14"} && self.cards.find{|c| c.value == "13"}
+    elsif self.cards.find{|c| c.value == 14} && self.cards.find{|c| c.value == 13}
       return true
     else
       false
@@ -153,7 +153,7 @@ class Hand < ApplicationRecord
     # The values that are repeated more than once, sorted by
     # number of occurrences
     def repeat_values
-      repeated = repeats.map { |value, repeats| [value.to_i, repeats.count] }
+      repeated = repeats.map { |value, repeats| [value, repeats.count] }
       repeated = repeated.reject { |value, count| count == 1 }
       repeated = repeated.sort_by { |value, count| [count, value] }.reverse
       repeated.map(&:first)
@@ -194,7 +194,7 @@ class Hand < ApplicationRecord
     # Generate an array of 5 consecutive values
     # starting with the `from` value
     def straight_values_from(from)
-      (from.to_i...from.to_i + 5).to_a
+      (from...from + 5).to_a
     end
 
 end

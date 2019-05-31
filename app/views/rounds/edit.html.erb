@@ -14,12 +14,21 @@
         font-size: 14px;
         line-height: 1.6;
       }
+      .clear {
+        clear: both;
+      }
+      .pseudoheader {
+        background-color: lightgrey;
+        padding: 1px 20px;
+      }
     </style>
   </head>
   <body>
     <div class="parent" style="width: 800px; margin: 0 auto;">
+      <div class="pseudoheader">
       <h1><%=@user.username%></h1> <h2>Total Points:<%=@user.points%><br> Ante:<%=@round.ante_amount%><br>
-      Bet:  </h2>
+      Bet: <%= @round.bet %> (Only taken if you choose to bet) </h2>
+      </div> <br>
       <div class="hands" style="float: right;">
       <div class="row">
         <%= image_tag("card-back.png", :size => "100x150") %>
@@ -49,17 +58,19 @@
       <strong>*DEALER QUALIFIES WITH A+K*</strong>
     </div>
     </div>
-<% if @round.status =='active'%>
-  <%= form_for @round do |f| %>
-  	<%= f.hidden_field :status, :value => "bet"%>
-  	<%= f.submit ["Bet"] %>
-    Wager twice the ante that your hand will beat the dealer's
-  <%end%>
-  <%= form_for @round do |f| %>
-    <%= f.hidden_field :status, :value => "fold"%>
-    <%= f.submit ["Fold"] %>
-    Forfeit your ante but do not bet more
-  <%end%>
-  <%end%>
+    <div class="clear">
+      <% if @round.status =='active'%>
+        <%= form_for @round do |f| %>
+        	<%= f.hidden_field :status, :value => "bet"%>
+        	<%= f.submit ["Bet"] %>
+          Wager twice the ante that your hand will beat the dealer's
+        <%end%>
+        <%= form_for @round do |f| %>
+          <%= f.hidden_field :status, :value => "fold"%>
+          <%= f.submit ["Fold"] %>
+          Forfeit your ante but do not bet more
+        <%end%>
+        <%end%>
+  </div>
   </body>
 </html>
