@@ -76,11 +76,15 @@ a:link  {
   width: 200px;
   margin-top: 50px;
   display: block;
+  text-align: left;
 }
 
 
 .header ul {
       padding-inline-start: 0px;
+}
+.edit_user input[type="submit"] {
+  width: 200px;
 }
 
 label {
