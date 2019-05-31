@@ -93,7 +93,6 @@ class RoundsController < ApplicationController
     @d_cards = @d_hand.sort_by_face
     @p_cards = @p_hand.sort_by_face
     @payout = @round.bet * @p_hand.payout_multiplier
-    byebug
     0
     # @hands = #find by id, is array
     # @d_hand = #@hands.find {player's = false}
