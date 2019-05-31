@@ -49,13 +49,10 @@
     <% dealer_hand =  round.hands.find_by(is_player_hand: false)%>
 
 
-    <h4>Ante Amount: <%=round.ante_amount %> </h4>
-    <ul>
-      <li><%=@user.username%>: <%=player_hand.rank_display%>  </li>
-      <li>Dealer: <%=dealer_hand.rank_display%></li>
-    </ul>
-
-
+      <td><%=round.ante_amount %> </td>
+      <td><%=player_hand.rank_display%></td>
+      <td><%=dealer_hand.rank_display%></td>
+      <td><%=round.status%></td>
     </tr>
 
     <% r+= 1 %>
