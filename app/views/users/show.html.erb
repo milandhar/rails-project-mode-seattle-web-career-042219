@@ -1,4 +1,20 @@
-<h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
+  <head>
+    <style media="screen">
+      .button {
+        padding: 5px;
+        background-color: white;
+        outline: 10px solid Brown;
+        color:#000;
+        text-decoration:none;
+        margin: 0 auto;
+        font-size: 23px;
+      }
+    </style>
+  </head>
+  <body>
+
+  </body>
+</html><h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
 <a href="/logout">Log Out</a>
 
 <% if session[:user_id] == @user.id %>
@@ -7,7 +23,7 @@
 <h1><%= @user.username%>'s Profile</h1>
 <% end %>
 <div class="header">
-
+<a class="button" href=../rounds/new>Start a new round</a>
 <ul class = "show_bullets">
   <li class = "user_info">Name: <%= @user.name%></li>
   <li class = "user_info">Points: <%= @user.points%></li>
@@ -16,7 +32,6 @@
 
 <ul class = "show_bullets">
   <% if session[:user_id] == @user.id %>
-  <li class = "link_li"><%= link_to "Start New Round", new_round_path %></li>
   <li class = "link_li"><%= link_to "Edit Profile", edit_user_path %></li>
   <li class = "link_li"><%= link_to "Log Out", logout_path %></li>
   <% end %>
