@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :rounds
   has_many :hands, through: :rounds
+  validates :name, :username, presence: true
+  validates :username, uniqueness: true
 
   def initialize(attributes = {})
     super

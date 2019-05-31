@@ -23,16 +23,30 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    redirect_to login_path
+    @user = User.new(user_params)
+    if @user.save
+      flash[:success] = "Profile Created Sucessfully"
+
+      redirect_to @user
+    else
+      flash[:errors] = "Please Select a Different Username"
+      render :new
+    end
   end
 
   def edit
   end
 
   def update
-    @user.update(user_params)
-    redirect_to @user
+
+    if @user.update(user_params)
+      flash[:success] = "Profile Created Sucessfully"
+      redirect_to @user
+    else
+      flash[:errors] = "Please Select a Different Username"
+      render :edit
+    end
+
   end
 
 
