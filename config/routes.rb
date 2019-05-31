@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   #get 'users/:id/analytics', to: 'users#analytics'
-  resources :cards
-  resources :hands
-  resources :rounds
-  resources :users
+  resources :rounds, except: [:delete, :index]
+  resources :users, except: [:delete]
   resources :session
   get '/login', to: 'sessions#login'
   post '/login', to: 'sessions#create'
