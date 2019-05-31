@@ -59,9 +59,13 @@
       <strong>*DEALER QUALIFIES WITH A+K*</strong>
     </div>
   </div>
-
     <%= form_for @round do |f| %>
     <div class="ante-div clear">
+
+<div class="flash-alert">
+  <%= flash[:errors] %>
+</div>
+
   	<%= f.label :ante_amount %>
   	<%= f.text_field :ante_amount %>
     </div>
