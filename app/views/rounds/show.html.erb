@@ -42,9 +42,9 @@
           <h2>Total Points: <%=@user.points%> </h2>
 
             <% if @round.status == 'win' && @d_hand.dealer_qualify? %>
-                <h3 class = "greenheader">(+<%= @payout + @round.bet %>) </h3>
+                <h3 class = "greenheader">(+<%= @payout + @round.ante_amount %>) </h3>
             <% elsif @round.status == 'win'%>
-            <h3 class = "greenheader">  (+<%= @round.bet %>)</h3>
+            <h3 class = "greenheader">  (+<%= @round.ante_amount %>)</h3>
             <% elsif @round.status == 'lose' %>
             <h3 class = "redheader">  (-<%= @round.bet + @round.ante_amount %>)</h3>
             <% end %>
