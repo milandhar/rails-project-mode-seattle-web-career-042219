@@ -21,6 +21,14 @@
         background-color: lightgrey;
         padding: 1px 20px;
       }
+      .button {
+        padding:5px;
+        background-color: #dcdcdc;
+        border: 1px solid #666;
+        color:#000;
+        text-decoration:none;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
@@ -69,12 +77,14 @@
 </div>
 
   	<%= f.label :ante_amount %>
-  	<%= f.text_field :ante_amount %>
+  	<%= f.text_field :ante_amount, :value => 100 %>
     </div>
 
     <%= f.hidden_field :user_id, :value => session[:user_id] %>
     <%= f.hidden_field :status, :value => "active" %>
   	<%= f.submit ["Deal!"] %>
+    <br><br>
+    <a class="button" href=../users/<%="#{@user.id}"%>>Return Home</a>
   <%end%>
   </div>
   </div>
