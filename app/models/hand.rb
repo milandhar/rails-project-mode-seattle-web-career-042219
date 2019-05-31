@@ -20,7 +20,9 @@ class Hand < ApplicationRecord
     self.cards.each{|c| puts c.long}
   end
 
+#used ranking and type methods from: 
 #https://codereview.stackexchange.com/questions/37165/weekend-challenge-ruby-poker-hand-evaluation
+
   ACE_LOW  = 1
   ACE_HIGH = 14
 

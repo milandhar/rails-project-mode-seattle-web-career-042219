@@ -25,24 +25,32 @@ class User < ApplicationRecord
   ## The following Analytics methods will be filled in once the round logic is complete
   def win_streak
     i = 0
-    # while i < self.rounds.all.count
-    #   # if (self.rounds.all[i].won?)
-    #   #   i += 1
-    #   # else
-    #   #   i
-    #   # end
-    # end
+    while i < self.rounds.count
+      if (self.rounds[i].status == "won")
+        i += 1
+      else
+        break
+      end
+    end
+    i
   end
 
   def fold_percentage
-
-    # folded_rounds = self.rounds.all.where(fold).count
-    # folded_rounds / self.rounds.all.count
+    folded_rounds = self.rounds.where(status: "fold").count.to_f
+    fold_percent = ((folded_rounds / self.rounds.count)*100).round(1)
+    "#{fold_percent}%"
   end
 
   def win_percentage
-    # won_rounds = self.rounds.all.where(won).count
-    # won_rounds / self.rounds.all.count
+    won_rounds = self.rounds.where(status: "win").count.to_f
+    win_percent = ((won_rounds / self.rounds.count)*100).round(1)
+    "#{win_percent}%"
+  end
+
+  def lose_percentage
+    lost_rounds = self.rounds.where(status: "lose").count.to_f
+    lose_percent = ((lost_rounds / self.rounds.count)*100).round(1)
+    "#{lose_percent}%"
   end
 
 end
