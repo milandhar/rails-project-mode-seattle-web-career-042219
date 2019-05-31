@@ -1,37 +1,37 @@
-# Rails Project Mode
+# Caribbean Stud Poker Game
 
-Congratulations, we are starting project mode! This means that you'll spend the rest of the week working in a team to build out a Rails project of your choice. There will be some lectures and new material scheduled throughout the week, but the bulk of the time will be working on your projects.
+![Dwight Poker GIF](https://media.rbl.ms/image?u=%2Ffiles%2F2016%2F07%2F11%2F636038432853156916-2030391616_2x22-Casino-Night-Animated-gif-the-office-8141837-325-188.gif&ho=https%3A%2F%2Faz616578.vo.msecnd.net&s=825&h=e7f91383de6db057190702ea1c4585343a928f84f189dc39a07b9364a083d3d1&size=980x&c=3367456664)
 
+## Installation
+* Make sure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed.
+* Fork and Clone the [repository](https://github.com/milandhar/rails-project-mode-seattle-web-career-042219
+* Navigate using `cd` to the folder containing `rails-project-mode-seattle-web-career-042219`
+* Run `bundle install`
+* Create and migrate the tables using `rake db:migrate`]
+* Seed the cards into the database using `rake db:seed`
 
-Some example project ideas from previous classes:
+## Using the Program
+* Start the program: `rails s`
+* Navigate to http://localhost:3000/login to begin
+* Click the "Create New Profile" link
+* Choose a Username and enter your name, then press the submit button
+* Log in using your new Username. You will now be taken to your profile page. Here you may edit your profile, view your stats, log out, or view the list of all users.
+* To begin playing, press "Start a new round". You start with 1000 points to play with.
+* Choose your desired Ante amount and press "Deal!"
+* Based on your visible cards and the dealer's one flipped card, you may bet or fold.
+* You will then see the rest of the dealer's cards and both hand types. The "Total Points" section will indicate how many points you won or lost in the round.
+* Next you may play another round or return to your profile page.
 
-1. [Regifter](http://regifter.herokuapp.com/) - A gift trading app that lets users upload images and descriptions of unwanted gifts and propose trades with other users.
-1. [Flatiron Postcard](http://flatironpostcard.herokuapp.com/) - An app that lets you create and send custom postcards to friends and family
-1. Petster - A social media site for pets
-1. [ROBYStuff - Rent or Buy Your Stuff](https://stark-falls-90133.herokuapp.com/listings)
-1. [Planning Ahead - Plan Your Funeral](https://ancient-mesa-18771.herokuapp.com/users/summary)
-1. [JOBuddy - Assistance with Job Applications](https://sheltered-woodland-79144.herokuapp.com/)
-
-
-## Requirements:
-
-1. You should have least five models. You do not have to have all of these built out on day one. But by the end of the week, you should have at least five models.
-
-2. Some methods in your models. There should be at least twenty methods total in your models. These are to be used to better extract data from your tables. Think Flatiron BnB Lab
-
-3. No APIs until you get approval from an instructor.  The reason is because API's oftentimes leads you to learning the specific API really well, but not learning Rails that well.  Rails is a more transferable skill.  So stick with that.
-
-4. Specs - there should be at least 10 specs in your project (five per person). 
-
-5. An analytics page - The main learning goal of this is to get you to write some interesting activerecord queries.
-
-6. No JavaScript. Stay focused on Rails for this project - we'll have plenty of time this semeseter to cover JS topics. 
-
-## Project Task Guidelines
-- come up with idea, model out domain. 
-- add model tests, start building out basic features. Have some functionality built out by the end of the day. 
-- Iterate on the features that you built yesterday. Go from a 'skateboard' version to a scooter or a bicycle. It doesnt' have to be perfect, but it should be working. 
-- start styling/ cleaning up issues. 
-- issue cleanup and final demos. 
+For further details on Caribbean Stud rules, check out its [Wikipedia Page](https://en.wikipedia.org/wiki/Caribbean_stud_poker)
 
 
+
+##  A Look Inside the Caribbean Stud Poker Game
+Gameplay Interface:
+![Imgur](https://i.imgur.com/JnZdkf9.png)
+
+Analytics Page:
+![Imgur](https://i.imgur.com/mAQUOxQ.png)
+
+## Credits
+The Caribbean Stud Poker Game was developed by [Milan Dhar](https://github.com/milandhar) and [Alex Kitelinger](https://github.com/bureaucratix).
