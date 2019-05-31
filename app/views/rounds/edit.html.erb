@@ -4,12 +4,23 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-      body {background-color: lightblue;}
+      .payouts {
+        border-radius: 25px;
+        background: lightblue;
+        padding: 20px;
+        width: 250px;
+        height: 305px;
+        float: left;
+        font-size: 14px;
+        line-height: 1.6;
+      }
     </style>
   </head>
   <body>
-    <h1><%=@user.username%></h1> <h2>Total Points:<%=@user.points%><br> Current Ante:<%=@round.ante_amount%> </h2>
-    <div class="parent">
+    <div class="parent" style="width: 800px; margin: 0 auto;">
+      <h1><%=@user.username%></h1> <h2>Total Points:<%=@user.points%><br> Ante:<%=@round.ante_amount%><br>
+      Bet:  </h2>
+      <div class="hands" style="float: right;">
       <div class="row">
         <%= image_tag("card-back.png", :size => "100x150") %>
         <%= image_tag("card-back.png", :size => "100x150") %>
@@ -22,8 +33,23 @@
           <%= image_tag("card-images/#{c.short}.png", :size => "100x150") %>
         <%end%>
       </div>
+      <h3 style="text-align: center" >YOUR HAND: <%= @p_hand.rank_display %></h3>
     </div>
-
+    <div class="payouts" >
+      <h3 class="payouttitle"> PAYOUTS ON WIN </h3>
+      ROYAL FLUSH...................100 to 1 <br>
+      STRAIGHT FLUSH...............50 to 1<br>
+      FOUR OF A KIND.................20 to 1<br>
+      FULL HOUSE.........................7 to 1<br>
+      FLUSH....................................5 to 1<br>
+      STRAIGHT..............................4 to 1<br>
+      THREE OF A KIND.................3 to 1<br>
+      TWO PAIR..............................2 to 1<br>
+      EVERYTHING ELSE...............1 to 1<br>
+      <strong>*DEALER QUALIFIES WITH A+K*</strong>
+    </div>
+    </div>
+<% if @round.status =='active'%>
   <%= form_for @round do |f| %>
   	<%= f.hidden_field :status, :value => "bet"%>
   	<%= f.submit ["Bet"] %>
@@ -33,6 +59,7 @@
     <%= f.hidden_field :status, :value => "fold"%>
     <%= f.submit ["Fold"] %>
     Forfeit your ante but do not bet more
+  <%end%>
   <%end%>
   </body>
 </html>

@@ -49,14 +49,22 @@ class RoundsController < ApplicationController
 
   def update
     @round = Round.find(params[:id])
-    if @round.status == "fold"
-    end
-
-
     #win/lose logic needs to be enacted in here if status = 'bet'
     if @round.update(round_params())
+      # byebug
+      if @round.status == 'fold'
+        #fold things
+
+      elsif @round.status == 'bet'
+        #determime win/lose, pay out, change status to win/lose
+      end
+
+
+        #error with round status
+
         redirect_to @round
     else
+        #error here
         render :edit
     end
   end
@@ -64,6 +72,11 @@ class RoundsController < ApplicationController
   def show
     @round = Round.find(params[:id])
     @user = @round.user
+    @hands = @round.hands.to_a
+    @d_hand = @hands.find{|h| h.is_player_hand == false}
+    @p_hand = @hands.find{|h| h.is_player_hand == true}
+    @d_cards = @d_hand.sort_by_face
+    @p_cards = @p_hand.sort_by_face
     # @hands = #find by id, is array
     # @d_hand = #@hands.find {player's = false}
   end

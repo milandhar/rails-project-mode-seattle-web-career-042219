@@ -9,7 +9,7 @@ class Hand < ApplicationRecord
 
 
   def sort_by_face
-    self.cards.sort_by {|c| [c.value, c.suit] }
+    self.cards.sort_by {|c| [c.value.to_i, c.suit] }
   end
 
   def show_short
@@ -45,6 +45,28 @@ class Hand < ApplicationRecord
   # type and that type's base score
   def rank
     RANKS.detect { |method, rank| send :"#{method}?" } || [:high_card, 0]
+  end
+
+  def rank_display
+    self.rank[0].to_s.split("_").join(" ").upcase
+  end
+
+  def d_rank_display
+    if dealer_qualify?()
+      rank_display()
+    else
+      "NOT QUALIFIED"
+    end
+  end
+
+  def dealer_qualify?
+    if self.rank[1] != 0
+      return true
+    elsif self.cards.find{|c| c.value == "14"} && self.cards.find{|c| c.value == "13"}
+      return true
+    else
+      false
+    end
   end
 
   # The hand's type (e.g. :flush or :pair)
