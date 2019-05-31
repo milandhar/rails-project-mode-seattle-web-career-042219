@@ -37,7 +37,14 @@
       <div class="pseudoheader">
 
         <h1> <%=@user.username%></h1>
-        <h2>Total Points:<%=@user.points%> <br> Ante:<%=@round.ante_amount%> <br>
+        <h2>Total Points:<%=@user.points%>
+          <% if @round.status == 'win' && @d_hand.dealer_qualify? %>
+            + <%= @payout + @round.bet %>
+          <% elsif @round.status == 'win'%>
+            + <%= @round.bet %>
+          <% elsif @round.status == 'lose' %>
+            - <%= @round.bet + @round.ante_amount %>
+          <% end %> <br> Ante:<%=@round.ante_amount%> <br>
           Bet:
           <%if @round.status == 'fold'%>
             FOLD
