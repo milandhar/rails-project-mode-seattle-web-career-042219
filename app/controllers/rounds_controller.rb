@@ -51,6 +51,7 @@ class RoundsController < ApplicationController
     @hands = @round.hands.to_a
     @d_hand = @hands.find{|h| h.is_player_hand == false}
     @p_hand = @hands.find{|h| h.is_player_hand == true}
+    @payout = @round.bet * @p_hand.payout_multiplier
     if @round.update(round_params())
       # byebug
       if @round.status == 'fold'
@@ -65,13 +66,14 @@ class RoundsController < ApplicationController
           #ante win/refund
           @user.points += @round.bet
           #dynamic win for different hands
-          @user.points += (@round.bet * @p_hand.payout_multiplier)
+          @user.points += @payout
           @round.status = 'win'
         else #LOSE
           @user.points -= @round.bet
           @round.status = 'lose'
         end
         @user.save
+        @round.save
       else
         render :edit
       end
@@ -90,6 +92,9 @@ class RoundsController < ApplicationController
     @p_hand = @hands.find{|h| h.is_player_hand == true}
     @d_cards = @d_hand.sort_by_face
     @p_cards = @p_hand.sort_by_face
+    @payout = @round.bet * @p_hand.payout_multiplier
+    byebug
+    0
     # @hands = #find by id, is array
     # @d_hand = #@hands.find {player's = false}
   end

@@ -68,7 +68,7 @@ class Hand < ApplicationRecord
   end
 
   def payout_multiplier
-    case player_hand.rank[1]
+    case self.rank[1]
     when 8
     #straight_flush
       50
