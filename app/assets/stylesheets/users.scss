@@ -382,3 +382,57 @@ td {
 .header .show_bullets {
   padding-top: 20px;
 }
+
+.nav-box{
+  background-color: #DDD;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: right;
+  z-index: 1;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0px;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  list-style-type: none;
+  padding: 0px;
+  width: 35%;
+  justify-content: space-evenly;
+}
+
+#navbar li {
+  margin-right: 10px;
+}
+
+#navbar a {
+  color: black;
+  margin-right: 10px;
+}
+
+#navbar li:before {
+  content: '\2660';
+  margin-left: -20px;
+  margin-right: 3px;
+}
+
+#navbar h4 {
+  padding-left: 10px;
+}
+
+nav {
+  display: inline-block;
+  margin-right: 18px;
+  width: 50%;
+}
