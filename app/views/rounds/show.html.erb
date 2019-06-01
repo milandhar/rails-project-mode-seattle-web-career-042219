@@ -47,6 +47,8 @@
             <h3 class = "greenheader">  (+<%= @round.ante_amount %>)</h3>
             <% elsif @round.status == 'lose' %>
             <h3 class = "redheader">  (-<%= @round.bet + @round.ante_amount %>)</h3>
+            <% elsif @round.status == 'fold' %>
+            <h3 class = "redheader">  (-<%= @round.ante_amount %>)</h3>
             <% end %>
 
         </div>
