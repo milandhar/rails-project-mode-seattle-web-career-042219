@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_31_034710) do
+ActiveRecord::Schema.define(version: 2019_05_29_212030) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
     t.string "suit"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 2019_05_31_034710) do
   end
 
   create_table "hand_cards", force: :cascade do |t|
-    t.integer "card_id"
-    t.integer "hand_id"
+    t.bigint "card_id"
+    t.bigint "hand_id"
     t.index ["card_id"], name: "index_hand_cards_on_card_id"
     t.index ["hand_id"], name: "index_hand_cards_on_hand_id"
   end
