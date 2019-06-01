@@ -14,8 +14,18 @@
   <body>
 
   </body>
-</html><h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
-<a href="/logout">Log Out</a>
+
+<div class="nav-box">
+      <nav id = "navbar">
+        <h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
+        <ul>
+          <li><%= link_to "Go to Users List", users_path %></li>
+          <li><%= link_to "Edit Profile", edit_user_path %></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        </ul>
+      </nav>
+  </div>
+
 
 <% if session[:user_id] == @user.id %>
 <h1>Welcome, <%= @user.username%>!</h1>
@@ -30,13 +40,6 @@
 </ul>
 
 
-<ul class = "show_bullets">
-  <% if session[:user_id] == @user.id %>
-  <li class = "link_li"><%= link_to "Edit Profile", edit_user_path %></li>
-  <li class = "link_li"><%= link_to "Log Out", logout_path %></li>
-  <% end %>
-  <li class = "link_li"><%= link_to "Go to Users List", users_path %></li>
-</ul>
 
 </div>
 

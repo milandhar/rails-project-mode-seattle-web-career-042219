@@ -1,5 +1,13 @@
-<h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
-<a href="/logout">Log Out</a>
+<div class="nav-box">
+      <nav id = "navbar">
+        <h4>Logged in as <%= User.find(session[:user_id]).username %></h4>
+        <ul>
+          <li><%= link_to "Go to Users List", users_path %></li>
+          <li><%= link_to "Edit Profile", edit_user_path(User.find(session[:user_id])) %></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        </ul>
+      </nav>
+  </div>
 
 <h1>All Players:</h1>
 <div class="body">
@@ -27,7 +35,7 @@
     <%= image_tag("card-images/JD", :size => "150x225") %>
     <%= image_tag("card-back.png", :size => "150x225") %>
     <%= image_tag("card-images/JD", :size => "150x225") %>
-    <%= image_tag("card-back.png", :size => "150x225") %> 
+    <%= image_tag("card-back.png", :size => "150x225") %>
   </div>
 
 </div>
